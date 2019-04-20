@@ -1,0 +1,5 @@
+flask
+flask-mongoengine
+authlib
+loginpass
+flask-cors==3.0.4
