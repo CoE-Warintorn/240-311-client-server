@@ -5,6 +5,7 @@ class Book(me.Document):
     title = me.StringField(required=True)
     author = me.StringField(required=True)
     is_read = me.BooleanField(required=True)
+    # owner = me.
     created_time = me.DateTimeField(required=True,
                                     default=datetime.datetime.now)
     updated_time = me.DateTimeField(required=True,
