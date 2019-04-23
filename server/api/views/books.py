@@ -19,10 +19,10 @@ def all_books():
         print('Book added!!')
         return jsonify(book.to_dict())
     else:
-        book = models.Book.objects()
+        books = models.Book.objects()
         print('get')
     # return jsonify(book.to_dict())
-        return jsonify(book)
+        return jsonify(books)
     return
 
 @module.route('/')
