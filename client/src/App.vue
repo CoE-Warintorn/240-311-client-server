@@ -6,7 +6,7 @@
           <b-navbar-brand style="padding-left: 2%">Book Library</b-navbar-brand>
           <b-collapse id="nav-collapse" is-nav>
             <b-navbar-nav class="ml-auto">
-              <b-button variant="outline-light">github</b-button>
+              <b-button href="https://github.com/essec/240-311-client-server" variant="outline-light">github</b-button>
               <b-nav-item>5910110044</b-nav-item>
             </b-navbar-nav>
           </b-collapse>  
