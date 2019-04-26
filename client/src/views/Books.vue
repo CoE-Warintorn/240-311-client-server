@@ -179,18 +179,18 @@ export default {
       this.addBookForm.title = '';
       this.addBookForm.author = '';
       this.addBookForm.is_read = [];
-      this.editForm._id.$oid = '';      
+      this.editForm._id.$oid = '';
       this.editForm.title = '';
       this.editForm.author = '';
       this.editForm.is_read = [];
-},
+    },
     onSubmit(evt) {
       evt.preventDefault();
       this.$refs.addBookModal.hide();
       let is_read = false;
       if (this.addBookForm.is_read[0]) is_read = true;
 
-      console.log(is_read)
+      console.log(is_read);
       const payload = {
         title: this.addBookForm.title,
         author: this.addBookForm.author,
