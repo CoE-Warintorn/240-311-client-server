@@ -1,0 +1,35 @@
+version: '3'
+services:
+  web:
+    build: .
+    image: netty-image
+    ports:
+      - "8000:8080"
+    working_dir: /app/client
+    command: ['yarn', 'serve']
+    depends_on:
+      - api
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+  api:
+    build: .
+    image: netty-image
+    ports:
+      - "8081:8081"
+    working_dir: /app/server
+    command: ['./run.sh']
+    depends_on:
+      - mongodb
+    links:
+      - mongodb
+    restart: always
+    volumes:
+      - /etc/localtime:/etc/localtime:ro
+  mongodb:
+    image: mongo
+    restart: always
+    volumes:
+      - ../deployment/mongodb/data/db:/data/db
+      - /etc/localtime:/etc/localtime:ro
+    
