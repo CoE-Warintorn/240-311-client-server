@@ -7,7 +7,7 @@ requires = f.read().split('\n')
 f.close()
 
 setup(name='api',
-      version='0.0.1',
+      version='0.1',
       description='',
       install_requires=requires,
       packages=find_packages(),

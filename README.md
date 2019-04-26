@@ -2,7 +2,7 @@
 ### server
 > 1. $ pyvenv env
 > 2. $ source env/bin/activate
-> 3. $ pip install requirements.txt
+> 3. $ python setup.py develop
 > 4. $ ./run.sh
 
 ### client
