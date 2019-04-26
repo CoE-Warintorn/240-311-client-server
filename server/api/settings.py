@@ -1,2 +1,2 @@
-# MONGODB = 'bookdb'
-MONGODB_SETTINGS = {'db': 'bookdb', 'alias': 'default'}
+MONGODB_DB = 'bookdb'
+MONGODB_HOST = 'localhost'

@@ -11,6 +11,7 @@ def create_app():
     app = Flask(__name__)
     app.config.from_object(settings)
     app.config.from_envvar('BOOK_SETTINGS')
+    print('==>', app.config)
 
     cors = CORS(app, resource={r'/api/*': {'origin': '*'}})
 

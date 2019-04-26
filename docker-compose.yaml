@@ -4,32 +4,32 @@ services:
     build: .
     image: netty-image
     ports:
-      - "8000:8080"
+      - "80:8080"
     working_dir: /app/client
     command: ['yarn', 'serve']
-    depends_on:
-      - api
     restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - .:/app
   api:
     build: .
     image: netty-image
     ports:
-      - "8081:8081"
+      - "5000:5000"
     working_dir: /app/server
     command: ['./run.sh']
-    depends_on:
-      - mongodb
     links:
       - mongodb
     restart: always
     volumes:
       - /etc/localtime:/etc/localtime:ro
+      - .:/app
   mongodb:
     image: mongo
     restart: always
     volumes:
       - ../deployment/mongodb/data/db:/data/db
       - /etc/localtime:/etc/localtime:ro
+    ports:
+      - "27017:27017"
     
